@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import openai 
 
-
 def chat(client):
     input_sentence = st.text_input("Enter your sentence here")
     prompt = "Here is a sentence" + input_sentence + """ 
@@ -20,7 +19,10 @@ def chat(client):
         )
     return response.choices[0].message.content
 
-client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
+client = ''
+while client == ''
+    client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
+
 output = chat(client)
 output_list = output.split('"')
 key_list = []
