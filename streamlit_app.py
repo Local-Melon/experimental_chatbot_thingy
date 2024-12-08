@@ -8,7 +8,7 @@ def chat(client):
     I want you to turn this into Old English, Middle English, Early Modern English and Modern English.
     The response should only include the type and the sentences
     It should look like this -> Old English: "Sentence" """
-    agree2 = st.checkbox("Api Key Inputted")
+    agree2 = st.checkbox("Sentence Inserted")
     if agree2:
         messages_so_far = [
             {"role": "user", "content": prompt}
