@@ -18,10 +18,10 @@ def chat(client):
         temperature=0.8,
         )
     return response.choices[0].message.content
-client = ''
 client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
-if client != '':
+
+if st.session_state.chatbot_api_key():
     output = chat(client)
     output_list = output.split('"')
     key_list = []
