@@ -18,8 +18,9 @@ def chat(client):
         temperature=0.8,
         )
     return response.choices[0].message.content
-client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
+
+client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
 if st.button("Submit Api Key"):
     output = chat(client)
@@ -48,4 +49,4 @@ if st.button("Submit Api Key"):
 
     df
 else:
-    pass
+    st.write("Hello")
