@@ -8,16 +8,18 @@ def chat(client):
     I want you to turn this into Old English, Middle English, Early Modern English and Modern English.
     The response should only include the type and the sentences
     It should look like this -> Old English: "Sentence" """
-    messages_so_far = [
-        {"role": "user", "content": prompt}
-    ]
+    agree2 = st.checkbox("Api Key Inputted")
+    if agree2:
+        messages_so_far = [
+            {"role": "user", "content": prompt}
+            ]
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=messages_so_far,
-        temperature=0.8,
-        )
-    return response.choices[0].message.content
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages_so_far,
+            temperature=0.8,
+            )
+        return response.choices[0].message.content
 
 
 client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
