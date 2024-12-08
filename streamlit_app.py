@@ -21,7 +21,7 @@ def chat(client):
 client = ''
 client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
-if client != ''
+if client != '':
     output = chat(client)
     output_list = output.split('"')
     key_list = []
@@ -33,7 +33,7 @@ if client != ''
                 element = element.lstrip(' ')
             for i in range(5):
                 element = element.strip(' ')
-       element = element.lstrip('\n')
+        element = element.lstrip('\n')
         element = element.strip('\n')
         element = element.lstrip(':')
         element = element.strip(':')
