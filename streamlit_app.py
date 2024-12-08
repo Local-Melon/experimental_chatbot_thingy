@@ -5,5 +5,5 @@ import openai
 
 
 
-input_sentence = st.text_input
+input_sentence = st.text_input("Say something idk")
 input_sentence.lstrip()
