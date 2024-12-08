@@ -3,9 +3,6 @@ import pandas as pd
 import openai 
 
 
-
-
-
 def chat(client):
     input_sentence = st.text_input("Enter your sentence here")
     prompt = "Here is a sentence" + input_sentence + """ 
