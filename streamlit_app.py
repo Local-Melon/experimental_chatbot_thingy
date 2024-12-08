@@ -20,7 +20,7 @@ def chat(client):
     return response.choices[0].message.content
 
 client = ''
-while client == ''
+while client == '':
     client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
 output = chat(client)
