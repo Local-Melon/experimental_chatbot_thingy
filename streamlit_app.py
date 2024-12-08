@@ -19,9 +19,10 @@ def chat(client):
         )
     return response.choices[0].message.content
 
-
+st.title("How did this sentence look like back then?")
+st.write("This little program here will take a sentence you've provided it with.")
+st.write("And turn it into a sentence from various period.")
 client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
-
 agree = st.checkbox("Api Key Inserted")
 if agree:
     output = chat(client)
