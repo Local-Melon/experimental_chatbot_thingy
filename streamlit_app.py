@@ -50,7 +50,7 @@ if agree:
         display_dict = {"Type": key_list, "Sentence": value_list}
         df = pd.DataFrame(display_dict)
 
-        df
+        st.dataframe(df)
     else:
         pass
 else:
