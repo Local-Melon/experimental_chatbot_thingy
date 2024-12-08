@@ -22,7 +22,8 @@ def chat(client):
 
 client = openai.OpenAI(api_key=st.text_input("OpenAI API Key", key="chatbot_api_key", type="password"))
 
-if st.button("Submit Api Key"):
+agree = st.checkbox("Api Key Inputted")
+if agree:
     output = chat(client)
     output_list = output.split('"')
     key_list = []
